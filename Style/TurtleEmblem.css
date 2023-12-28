@@ -1,0 +1,136 @@
+:root{
+    --emblemBack: #abfeff;
+    --turtleSkin: black;
+    --turtleShell: black;
+}
+#Turtle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: var(--emblemBack);
+    border-radius: 50%;
+
+    transform: rotate(45deg);
+}
+
+#turtleHead {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    display: block;
+    width: 17%;
+    height: 20%;
+    background-color: var(--turtleSkin);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    overflow: hidden;
+}
+
+#turtleShell {
+    position: absolute;
+    border-radius: 50% 50% 50% 50%;
+    background-color: var(--turtleShell);
+    width: 40%;
+    height: 50%;
+    left: 29%;
+    top: 23%;
+    z-index: 1;
+}
+
+#turtleLeftArm {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
+    transform:
+        scale(1.1)
+        rotate(45deg);
+    top: 23%;
+    left: 17%;
+}
+
+#turtleRightArm {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 23%;
+    right: 19%;
+    
+    
+
+    
+    transform: 
+        scaleX(-1.1)
+        scaleY(1.1)
+        rotate(45deg);
+    
+}
+
+#turtleLeftLeg {
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-5deg);
+}
+
+
+#turtleRightLeg {
+    position: absolute;
+    top: 55%;
+    right: 22%;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-5deg);
+    transform: scaleX(-1);
+}
+
+#turtleLegFin {
+    background-color: var(--turtleSkin);
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    border-radius: 50%;
+    top: 24%;
+
+}
+#turtleFoot {
+    position: absolute;
+    background-color: var(--turtleSkin);
+    width: 36%;
+    height: 40%;
+    border-radius: 50%;
+    top: 94%;
+    left: 10%;
+}
+#turtleLegNeg1 {
+    position: absolute;
+    background-color: var(--emblemBack);
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+    left: 40%;
+    top: 36%;
+
+}
+#turtleLegNeg2 {
+    position: absolute;
+    background-color: var(--emblemBack);
+    width: 60%;
+    height: 68%;
+    border-radius: 49%;
+    left: 32%;
+    top: 0%;
+
+}
+
+#turtleLegNeg3 {
+    position: absolute;
+    background-color: var(--emblemBack);
+    width: 50%;
+    height: 50%;
+    top: 104%;
+    left: 24%;
+    transform: rotate(45deg);
+
+}
