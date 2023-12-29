@@ -1,3 +1,63 @@
+:root{
+    --section-color: #e6e6e6;
+}
+
 body {
     background-color: white;
+    margin: 0;
+}
+
+#header {
+    font-size: 3vh;
+    text-align: center;
+}
+
+.Photo {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1vh solid #abfeff;
+    top: 20%;
+    left: 8%;
+
+    
+}
+
+#headshot {
+    position: relative;
+    height: 150%;
+    width: 120%;
+    top: -1%;
+    left: 1%;
+    transform: rotate(-45deg);
+}
+
+#appointment {
+    margin: 5vh auto 0 auto;
+    width: 25vw;
+    height: 7vh;
+}
+#appointmentButton {
+    width: 100%;
+    height: 100%;
+    background-color: #abfeff;
+    border-radius: 4vh;
+    border: 0.5vh solid #ababab;
+    font-size: 3vh;
+}
+#appointmentButton:hover {
+    background-color: #e6fffe;
+}
+
+#bio {
+    background-color: var(--section-color);
+    text-align: center;
+    width: 100%;
+    margin: 15vh 0 0 0;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    font-size: 3vh;
+    border-radius: 2vh;
 }

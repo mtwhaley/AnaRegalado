@@ -3,14 +3,40 @@
     --turtleSkin: black;
     --turtleShell: black;
 }
-#Turtle {
-    position: relative;
-    width: 400px;
-    height: 400px;
+
+.TurtleFam {
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
+    right: 10vh;
+    top: 15vh;
+
+}
+
+#Turtle1, #Turtle2, #Turtle3 {
+    position: absolute;
     background-color: var(--emblemBack);
     border-radius: 50%;
-
     transform: rotate(45deg);
+}
+
+#Turtle1 {
+    right: 0;
+    width: 66.7%;
+    height: 66.7%;
+}
+
+#Turtle2 {
+    width: 33.3%;
+    height: 33.3%;
+    left: 55%;
+    top: 65%;
+}
+#Turtle3 {
+    width: 33.3%;
+    height: 33.3%;
+    top: 12%;
+    left: 2%;
 }
 
 #turtleHead {
@@ -38,8 +64,8 @@
 
 #turtleLeftArm {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 25%;
+    height: 25%;
     
     transform:
         scale(1.1)
@@ -50,8 +76,8 @@
 
 #turtleRightArm {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 25%;
+    height: 25%;
     top: 23%;
     right: 19%;
     
@@ -69,8 +95,8 @@
     position: absolute;
     top: 55%;
     left: 20%;
-    width: 100px;
-    height: 100px;
+    width: 25%;
+    height: 25%;
     transform: rotate(-5deg);
 }
 
@@ -79,8 +105,8 @@
     position: absolute;
     top: 55%;
     right: 22%;
-    width: 100px;
-    height: 100px;
+    width: 25%;
+    height: 25%;
     transform: rotate(-5deg);
     transform: scaleX(-1);
 }
