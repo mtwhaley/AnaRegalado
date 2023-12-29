@@ -1,0 +1,78 @@
+:root{
+    --emblemColor: #abfeff;
+}
+
+#InsuranceEmblem {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1vh solid black;
+    overflow: hidden;
+    margin: 10vh;
+
+    border-radius: 50%;
+
+}
+
+#shieldRendering {
+    position: absolute;
+    top: -17%;
+    left: -15%;
+    width: 130%;
+    height: 130%;
+    background-color: white;
+
+}
+
+#innerShield {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    z-index: 1;
+}
+
+#innerShield .shieldBody, #innerShield .shieldBottom, #innerShield .shieldTop1,#innerShield .shieldTop2 {
+    background-color: white;
+    
+}
+
+.shieldTop1, .shieldTop2 {
+    position: absolute;
+    width: 26%;
+    height: 10%;
+    border-radius: 10%;
+    background-color: var(--emblemColor);
+    
+}
+.shieldTop1 {
+    left: 26%;
+    top: 22%;
+    transform: rotate(-10deg);
+}
+.shieldTop2 {
+    transform: rotate(10deg);
+    left: 48%;
+    top: 22%;
+}
+.shieldBody {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: var(--emblemColor);
+    border-radius: 5% 5% 40% 40%;
+}
+.shieldBottom {
+    position: absolute;
+    top: 58%;
+    left: 37.5%;
+    width: 25%;
+    height: 25%;
+    background-color: var(--emblemColor);
+    border-radius: 5%;
+    transform: rotate(45deg);
+}
+
