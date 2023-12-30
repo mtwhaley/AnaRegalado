@@ -160,3 +160,25 @@
     transform: rotate(45deg);
 
 }
+
+@media (max-width: 1024px) {
+    #Turtle1, #Turtle2, #Turtle3 {
+        transform: rotate(55deg);
+    }
+    #Turtle1 {
+        right: -5vh;
+    }
+    #Turtle2 {
+        top: 35vh;
+        left: -38vw;
+    }
+    #Turtle3 {
+        top: 43vh;
+        left: -50vw;
+    }
+    .TurtleFam {
+        width: 25vh;
+        height: 25vh;
+    }
+
+}

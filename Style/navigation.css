@@ -37,3 +37,12 @@
 .navTable button:hover {
     background-color: #7a7a7a;
 }
+
+@media (max-width: 1024px) {
+    .navigation {
+        margin-top: calc(50vw + 18vh);
+        position: relative;
+        top: -7vh;
+        width: 50vw;
+    }
+}

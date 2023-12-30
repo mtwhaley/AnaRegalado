@@ -80,3 +80,22 @@ hr {
     margin: auto;
     
 }
+
+
+@media (max-width: 1024px) {
+    #appointment {
+        width: 70vw;
+        height: 8vh;
+        margin-top: 0;
+        
+    }
+    .Photo {
+        width: 50vw;
+        height: 50vw;
+        left: 24vw;
+        top: 15vh;
+    }
+
+
+
+}
