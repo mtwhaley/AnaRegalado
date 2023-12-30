@@ -93,6 +93,10 @@
 }
 .listTable tr {
     border: 2vh solid transparent;
+    
+}
+.listTable td {
+    padding-bottom: 1vh;
 }
 .leftCell{
     text-align: right;
