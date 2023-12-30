@@ -167,17 +167,18 @@
 
     }
     #Turtle1 {
-        right: -1vw;
+        right: 10vw;
     }
     #Turtle2 {
         top: 37vh;
-        left: -40vw;
+        left: -52vw;
     }
     #Turtle3 {
         top: 43vh;
-        left: -50vw;
+        left: -62vw;
     }
     .TurtleFam {
+        right: 0;
         width: 25vw;
         height: 25vw;
     }
