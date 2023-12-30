@@ -43,6 +43,7 @@
         margin-top: calc(50vw + 18vh);
         position: relative;
         top: -7vh;
-        width: 50vw;
+        width: 45vh;
+        max-width: 80vw;
     }
 }
