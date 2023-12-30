@@ -14,17 +14,17 @@
 
 
 #infoButtonTable {
-    margin: 0 9.6% 0 auto;
+    background-color: red;
     /*table-layout: fixed;*/
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     flex-direction: row-reverse;
-    max-width: 80%;
+    width: 80%;
+    
     
 }
 
-#infoButtonTable td {
-    height: 7vh;
-}
 
 .infoTab {
     border-bottom: none;
@@ -90,6 +90,9 @@
     margin-right: auto;
     table-layout: fixed;
     width: 100%;
+}
+.listTable tr {
+    border: 2vh solid transparent;
 }
 .leftCell{
     text-align: right;
