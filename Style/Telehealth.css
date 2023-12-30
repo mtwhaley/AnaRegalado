@@ -12,7 +12,8 @@
     height: 15vh;
     border-radius: 2vh;
     text-align: right;
-    vertical-align: middlee;
+    vertical-align: middle;
+    
 }
 
 #BannerText {
@@ -22,7 +23,7 @@
     vertical-align: middle;
     font-size: 8vh;
     top: 50%;
-    right: 7vh;
+    right: 5vw;
     transform: translateY(-50%);
 }
 
@@ -30,6 +31,6 @@
 @media (max-width: 1024px) {
     #BannerText {
         font-size: 5vw;
-        max-width: 60%;
+        max-width: 50%;
     }
 }
