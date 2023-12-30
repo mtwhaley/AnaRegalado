@@ -170,11 +170,11 @@
         right: 10vw;
     }
     #Turtle2 {
-        top: calc(20vh + 13vw);
+        top: calc(16vh + 17vw);
         left: -57vw;
     }
     #Turtle3 {
-        top: calc(20vh + 20vw);
+        top: calc(16vh + 24vw);
         left: -64vw;
     }
     .TurtleFam {
