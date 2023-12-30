@@ -12,15 +12,13 @@
     padding: 0 0 5vh 0;
 }
 
-
 #infoButtonTable {
-    background-color: red;
-    /*table-layout: fixed;*/
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
+    flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
-    width: 80%;
+    max-width: 100%;
     
     
 }
