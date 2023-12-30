@@ -25,3 +25,11 @@
     right: 7vh;
     transform: translateY(-50%);
 }
+
+
+@media (max-width: 1024px) {
+    #BannerText {
+        font-size: 5vw;
+        max-width: 60%;
+    }
+}

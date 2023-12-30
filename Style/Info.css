@@ -12,10 +12,13 @@
     padding: 0 0 5vh 0;
 }
 
+
 #infoButtonTable {
     margin: 0 9.6% 0 auto;
-    table-layout: fixed;
-    z-index: 1;
+    /*table-layout: fixed;*/
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 80%;
     
 }
 
