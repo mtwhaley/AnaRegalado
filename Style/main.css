@@ -12,6 +12,13 @@ body {
     text-align: center;
 }
 
+hr {
+    width: 85%;
+    color: #abfeff;
+    background-color: #abfeff;
+    height: 0.2vh;
+}
+
 .Photo {
     position: absolute;
     height: 30vh;
@@ -56,6 +63,8 @@ body {
     background-color: var(--section-color);
     text-align: center;
     margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 5vh;
     padding-bottom: 5vh;
     border-radius: 2vh;
@@ -68,7 +77,6 @@ body {
     text-align: center;
     width: 80%;
     font-size: 3vh;
-    
     margin: auto;
     
 }

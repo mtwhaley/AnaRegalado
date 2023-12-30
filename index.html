@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Style/main.css"></style>
     <link rel="stylesheet" href="Style/TurtleEmblem.css"></style>
     <link rel="stylesheet" href="Style/navigation.css"></style>
+    <link rel="stylesheet" href="Style/Info.css"></style>
 
 </head>
 <body>
@@ -60,6 +61,143 @@
              
         </div>
     </div>
+
+    <div id="info">
+        <table id="infoButtonTable">
+            <tr>
+                <td><button id="servicesButton" class="infoTab">Services</button></td>
+                <td><button id="approachesButton" class="unselectedButton">Approaches</button></td>
+                <td><button id="insuranceButton" class="unselectedButton">Insurance</button></td>
+                <td><button id="paymentButton" class="unselectedButton">Payment</button></td>
+            </tr>
+        </table>
+        <div class="infoArea">
+            <div id="serviceInfo" class="infoDisplay">
+                <p class="listHeader">Services provided for:<hr></p>
+                <table class="listTable" style="width: 90%;">
+                    <tr>
+                        <td>ADHD</td>
+                        <td>Anger Management</td>
+                    </tr>
+                    <tr>
+                        <td>Anxiety</td>
+                        <td>Behavioral Issues</td>
+                    </tr>
+                    <tr>
+                        <td>Bipolar Disorder</td>
+                        <td>Chronic Illness</td>
+                    </tr>
+                    <tr>
+                        <td>Coping Skills</td>
+                        <td>Domestic Abuse</td>
+                    </tr>
+                    <tr>
+                        <td>Domestic Violence</td>
+                        <td>Eating Disorders</td>
+                    </tr>
+                    <tr>
+                        <td>Family Conflict</td>
+                        <td>Grief</td>
+                    </tr>
+                    <tr>
+                        <td>Life Transitions</td>
+                        <td>Marital and Premarital Conflict</td>
+                    </tr>
+                    <tr>
+                        <td>Prenatal/Postpartum/Maternal Issues</td>
+                        <td>Racial Identity</td>
+                    </tr>
+                    <tr>
+                        <td>Relationship Issues</td>
+                        <td>School Issues</td>
+                    </tr>
+                    <tr>
+                        <td>Self Esteem</td>
+                        <td>Sleep or Insomnia</td>
+                    </tr>
+                    <tr>
+                        <td>Spirituality Issues</td>
+                        <td>Stress</td>
+                    </tr>
+                    <tr>
+                        <td>Womens' Issues</td>
+                    </tr>
+                </table>
+                <p>and more!</p>
+            </div>
+            <div id="approachInfo" class="infoDisplay">
+                <p class="listHeader">Approaches:<hr></p>
+                <table class="listTable" style="width: 90%;">
+                    <tr>
+                        <td>Art Therapy</td>
+                        <td>Christian Counseling</td>
+                    </tr>
+                    <tr>
+                        <td>Cognitive Behavioral Therapy (CBT)</td>
+                        <td>Culturally-Sensitive Therapy</td>
+                    </tr>
+                    <tr>
+                        <td>Dialectal Behavior Therapy (DBT)</td>
+                        <td>Family Systems</td>
+                    </tr>
+                    <tr>
+                        <td>Motivational Interviewing</td>
+                        <td>Person-Centered Therapy</td>
+                    </tr>
+                    <tr>
+                        <td>Solution Focused Brief Therapy (SFBT)</td>
+                        <td>Strength-Based Therapy</td>
+                    </tr>
+                    <tr>
+                        <td>Trauma-Focused Therapy</td>
+                    </tr>
+                </table>
+                <p> </p>
+
+            </div>
+            <div id="insuranceInfo" class="infoDisplay">
+                <p class="listHeader">Accepted Insurances:<hr></p>
+                <table class="listTable">
+                    <tr>
+                        <td class="leftCell">Blue Cross / Blue shield</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Sunflower</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Medicaid</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">proviDrs</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Aetna</td>
+                        <td class="rightCell" style="top: 0; color: #d9422b; font-weight: normal;">pending</td>
+                    </tr>
+                            
+
+                                
+                </table>
+                <p> </p>
+            </div>
+            <div id="paymentInfo" class="infoDisplay">
+                <p class="listHeader">Accepted methods of payment:<hr></p>
+                <ul class="list">
+                    <li>Visa</li>
+                    <li>Mastercard</li>
+                    <li>cash</li>
+                    <li>check</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
     <div class="Photo">
@@ -141,5 +279,6 @@
         </div>
     </div>
 
+    <script src="Scripts/info.js"></script>
 </body>
 </html>
