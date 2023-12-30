@@ -1,13 +1,13 @@
 :root {
-    --selectedButton: #e6e6e6;
-    --unselectedButton: #b5b5b5;
+    --selectedButton: rgba(171, 226, 255, 0.734);
+    --unselectedButton: #e6e6e6;
 
 }
 
 #info {
     position: relative;
     top: 0;
-    margin: 15vh 0 0 0;
+    margin: 10vh 0 0 0;
     width: 100%;
     padding: 0 0 5vh 0;
 }
@@ -26,10 +26,14 @@
 .infoTab {
     border-bottom: none;
     background-color: var(--selectedButton);
+    margin-top: 0;
+
+    position: relative;
+    top: -0.5vh;
+    height: 6vh;
 }
 
 .infoTab, .unselectedButton {
-    height: 5vh;
     width: 20vh;
     font-size: 3vh;
     border-radius: 1vh 1vh 0 0;
@@ -40,6 +44,7 @@
 
 .unselectedButton {
     background-color: var(--unselectedButton);
+    height: 5vh;
 }
 
 .unselectedButton:hover {
@@ -60,7 +65,7 @@
 }
 
 .infoDisplay {
-    background-color: var(--selectedButton);
+    background-color: var(--unselectedButton);
     text-align: center;
     width: 80%;
     margin-left: auto;

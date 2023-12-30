@@ -1,0 +1,27 @@
+#telehealth {
+    width: 100%;
+    margin-top: 10vh;
+}
+
+#Banner {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #abfeff;
+    width: 95%;
+    height: 15vh;
+    border-radius: 2vh;
+    text-align: right;
+    vertical-align: middlee;
+}
+
+#BannerText {
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    font-size: 8vh;
+    top: 50%;
+    right: 7vh;
+    transform: translateY(-50%);
+}

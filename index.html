@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Style/TurtleEmblem.css"></style>
     <link rel="stylesheet" href="Style/navigation.css"></style>
     <link rel="stylesheet" href="Style/Info.css"></style>
+    <link rel="stylesheet" href="Style/Telehealth.css"></style>
 
 </head>
 <body>
@@ -62,6 +63,12 @@
         </div>
     </div>
 
+    <div id="telehealth">
+        <div id="Banner">
+            <div id="BannerText"><p><i><b>Telehealth appointments now available!</b></i></p></div>
+        </div>
+    </div>
+
     <div id="info">
         <table id="infoButtonTable">
             <tr>
@@ -72,89 +79,19 @@
             </tr>
         </table>
         <div class="infoArea">
+
             <div id="serviceInfo" class="infoDisplay">
                 <p class="listHeader">Services provided for:<hr></p>
-                <table class="listTable" style="width: 90%;">
-                    <tr>
-                        <td>ADHD</td>
-                        <td>Anger Management</td>
-                    </tr>
-                    <tr>
-                        <td>Anxiety</td>
-                        <td>Behavioral Issues</td>
-                    </tr>
-                    <tr>
-                        <td>Bipolar Disorder</td>
-                        <td>Chronic Illness</td>
-                    </tr>
-                    <tr>
-                        <td>Coping Skills</td>
-                        <td>Domestic Abuse</td>
-                    </tr>
-                    <tr>
-                        <td>Domestic Violence</td>
-                        <td>Eating Disorders</td>
-                    </tr>
-                    <tr>
-                        <td>Family Conflict</td>
-                        <td>Grief</td>
-                    </tr>
-                    <tr>
-                        <td>Life Transitions</td>
-                        <td>Marital and Premarital Conflict</td>
-                    </tr>
-                    <tr>
-                        <td>Prenatal/Postpartum/Maternal Issues</td>
-                        <td>Racial Identity</td>
-                    </tr>
-                    <tr>
-                        <td>Relationship Issues</td>
-                        <td>School Issues</td>
-                    </tr>
-                    <tr>
-                        <td>Self Esteem</td>
-                        <td>Sleep or Insomnia</td>
-                    </tr>
-                    <tr>
-                        <td>Spirituality Issues</td>
-                        <td>Stress</td>
-                    </tr>
-                    <tr>
-                        <td>Womens' Issues</td>
-                    </tr>
-                </table>
+                <table class="listTable" style="width: 90%;" id="serviceTable"></table>
                 <p>and more!</p>
             </div>
+
             <div id="approachInfo" class="infoDisplay">
                 <p class="listHeader">Approaches:<hr></p>
-                <table class="listTable" style="width: 90%;">
-                    <tr>
-                        <td>Art Therapy</td>
-                        <td>Christian Counseling</td>
-                    </tr>
-                    <tr>
-                        <td>Cognitive Behavioral Therapy (CBT)</td>
-                        <td>Culturally-Sensitive Therapy</td>
-                    </tr>
-                    <tr>
-                        <td>Dialectal Behavior Therapy (DBT)</td>
-                        <td>Family Systems</td>
-                    </tr>
-                    <tr>
-                        <td>Motivational Interviewing</td>
-                        <td>Person-Centered Therapy</td>
-                    </tr>
-                    <tr>
-                        <td>Solution Focused Brief Therapy (SFBT)</td>
-                        <td>Strength-Based Therapy</td>
-                    </tr>
-                    <tr>
-                        <td>Trauma-Focused Therapy</td>
-                    </tr>
-                </table>
+                <table class="listTable" style="width: 90%;" id="approachTable"></table>
                 <p> </p>
-
             </div>
+
             <div id="insuranceInfo" class="infoDisplay">
                 <p class="listHeader">Accepted Insurances:<hr></p>
                 <table class="listTable">
@@ -177,13 +114,11 @@
                     <tr>
                         <td class="leftCell">Aetna</td>
                         <td class="rightCell" style="top: 0; color: #d9422b; font-weight: normal;">pending</td>
-                    </tr>
-                            
-
-                                
+                    </tr>              
                 </table>
                 <p> </p>
             </div>
+
             <div id="paymentInfo" class="infoDisplay">
                 <p class="listHeader">Accepted methods of payment:<hr></p>
                 <ul class="list">
@@ -279,6 +214,29 @@
         </div>
     </div>
 
+    <script src="Scripts/ArrayLists.js"></script>
     <script src="Scripts/info.js"></script>
+    <script>
+        
+        
+        function MobileChanges(x) {
+                
+                if (x.matches) {
+                    loadListTable("serviceTable", 1, servicesOffered)
+                    loadListTable("approachTable", 1, approaches)
+                    
+                }
+                else {
+                    loadListTable("serviceTable", 2, servicesOffered)
+                    loadListTable("approachTable", 2, approaches)
+
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function(e) {
+                var x=window.matchMedia("(max-width: 1024px)")
+                MobileChanges(x)
+            })
+    </script>
 </body>
 </html>

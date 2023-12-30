@@ -1,5 +1,36 @@
 
 
+
+function loadListTable(tableID, numCols, array) {
+    array.sort()
+    const table=document.getElementById(tableID)
+
+    columnCounter=1
+    var currentRow
+    for (var i=0;i<array.length;i++) {
+        if (columnCounter==1) {
+            const newRow=document.createElement("tr")
+            currentRow=newRow
+        }
+
+
+        const cell=document.createElement("td")
+        cell.innerText=array[i]
+        currentRow.appendChild(cell)
+
+
+        if (columnCounter==numCols) {
+            table.appendChild(currentRow)
+            columnCounter=1
+        }
+        else {columnCounter+=1}
+
+        if ((columnCounter!=1)&&(i==array.length-1)) {
+            table.appendChild(currentRow)
+        }
+    }
+}
+
 function setInfoButtons() {
     const servicesButton=document.getElementById("servicesButton")
     const approachesButton=document.getElementById("approachesButton")
