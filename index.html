@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Style/navigation.css"></style>
     <link rel="stylesheet" href="Style/Info.css"></style>
     <link rel="stylesheet" href="Style/Telehealth.css"></style>
+    <link rel="stylesheet" href="Style/Location.css"></style>
 
 </head>
 <body>
@@ -25,7 +26,6 @@
         <ul>
             <li>Bachelor of Social Work - WSU</li>
             <li>Master of Social Work - WSU</li>
-            <li>Family Therapist - St Francis Ministries</li>
             <li>Mental Health Therapist - Counseling Avenues</li>
 
         </ul>
@@ -37,7 +37,7 @@
             <tr>
                 <td><a href="#about"><button>About</button></a></td>
                 <td><a href="#info"><button>Services</button></a></td>
-                <td><button>Location</button>Location</td>
+                <td><a href="#Location"><button>Location</button></a></td>
             </tr>
         </table>
 
@@ -75,7 +75,7 @@
 
     <div id="telehealth">
         <div id="Banner">
-            <div id="BannerText"><p><i><b>Telehealth appointments now available!</b></i></p></div>
+            <div id="BannerText"><p><i><b>Telehealth appointments also available!</b></i></p></div>
         </div>
     </div>
 
@@ -142,7 +142,18 @@
         </div>
     </div>
 
+    <div class="canvas" id="Location">
+        <p>Primary Location:</p>
+        <p>
+            <span style="font-size: larger;">Counseling Avenues</span><br>
+            1721 E Osage Rd #100<br>
+            Derby, KS 67037<br>
 
+        </p>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.864030613131!2d-97.24541753879956!3d37.54431613806754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87baeffe7ca45d27%3A0x7c777f4d2084120!2sCounseling%20Avenues%20LLC!5e0!3m2!1sen!2sus!4v1703995559579!5m2!1sen!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
 
 
 
@@ -249,5 +260,6 @@
                 MobileChanges(x)
             })
     </script>
+    
 </body>
 </html>

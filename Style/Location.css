@@ -1,0 +1,20 @@
+#Location {
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 10vh;
+}
+
+iframe {
+    width: 80vw;
+    height: 40vw;
+    border: 0;
+}
+
+
+@media (max-width: 1024px) {
+    iframe {
+        width: 90vw;
+        height: 90vw;
+    }
+}
