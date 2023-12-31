@@ -39,8 +39,10 @@
 }
 
 @media (max-width: 1024px) {
+    .navTable {
+        margin-top: 14vh;
+    }
     .navigation {
-        margin-top: calc(50vw + 18vh);
         position: relative;
         top: -7vh;
         width: 45vh;

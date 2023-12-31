@@ -41,6 +41,18 @@ hr {
     transform: rotate(-45deg);
 }
 
+#qualifications {
+    width: 100%;
+    margin: 10vh 0 0 0;
+    text-align: center;
+}
+#qualifications ul{
+    position: relative;
+    left: -3vh;
+    font-size: 3vh;
+    list-style-type: none;
+}
+
 #appointment {
     margin: 5vh auto 0 auto;
     width: 25vw;
@@ -83,6 +95,12 @@ hr {
 
 
 @media (max-width: 1024px) {
+    #qualifications {
+        margin-top: calc(50vw + 10vh);
+    }
+    #qualifications ul {
+        font-size: 4vw;
+    }
     #appointment {
         width: 70vw;
         height: 8vh;
