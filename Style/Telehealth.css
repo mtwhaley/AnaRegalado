@@ -10,10 +10,10 @@
 #telehealthEmblem {
     position: absolute;
     left: 7%;
-    top: -5vh;
-    width: 25vh;
-    height: 25vh;
-    background-color: var(--emblemColor);
+    top: -4vw;
+    width: 15vw;
+    height: 15vw;
+    background-color: white;
     border-radius: 50%;
     overflow: hidden;
 
@@ -21,7 +21,7 @@
 }
 
 #innerCircle {
-    background-color: white;
+    background-color: var(--emblemColor);
     position: absolute;
     width: 85%;
     height: 85%;
@@ -56,7 +56,7 @@
 
 #lensneg {
     position: absolute;
-    background-color: white;
+    background-color: var(--emblemColor);
     height: 50%;
     width: 17%;
     top: 25%;
@@ -91,7 +91,9 @@
 
 @media (max-width: 1024px) {
     #telehealthEmblem {
-        
+        top: -5vw;
+        width: 35vw;
+        height: 35vw;
     }
 
     #BannerText {
