@@ -10,7 +10,8 @@
 #telehealthEmblem {
     position: absolute;
     left: 7%;
-    top: -4vw;
+    top: calc((15vh - 15vw) / 2);
+    
     width: 15vw;
     height: 15vw;
     background-color: white;
