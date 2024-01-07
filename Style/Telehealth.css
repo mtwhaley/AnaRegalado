@@ -1,6 +1,67 @@
+:root{
+    --emblemColor: #abfeff;
+}
+
 #telehealth {
     width: 100%;
     margin-top: 10vh;
+}
+
+#telehealthEmblem {
+    position: absolute;
+    left: 7%;
+    top: -5vh;
+    width: 25vh;
+    height: 25vh;
+    background-color: var(--emblemColor);
+    border-radius: 50%;
+    overflow: hidden;
+
+
+}
+
+#innerCircle {
+    background-color: white;
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    top: 7.5%;
+    left: 7.5%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#box {
+    position: absolute;
+    background-color: #7a7a7a;/*rgb(171, 226, 255);*/
+    width: 60%;
+    height: 50%;
+    top: 25%;
+    left: 28%;
+    border-radius: 5%;
+
+}
+
+#lens {
+    position: absolute;
+    background-color: #7a7a7a;/*rgb(171, 226, 255);*/
+    height: 35%;
+    width: 35%;
+    top: 32%;
+    left: -4%;
+    transform: rotate(45deg);
+    border-radius: 5%;
+
+}
+
+#lensneg {
+    position: absolute;
+    background-color: white;
+    height: 50%;
+    width: 17%;
+    top: 25%;
+    left: -4%;
+
 }
 
 #Banner {
@@ -29,6 +90,10 @@
 
 
 @media (max-width: 1024px) {
+    #telehealthEmblem {
+        
+    }
+
     #BannerText {
         font-size: 5vw;
         max-width: 50%;
