@@ -98,8 +98,8 @@ form {
     position: absolute;
     background-color: var(--closeButtonColor);
     border-radius: 50%;
-    top: -1.5vw;
-    right: -1.5vw;
+    top: calc(5vh - 1.5vw);
+    right: calc(25% - 1.5vw);
     width: 3vw;
     height: 3vw;
     z-index: 102;
@@ -133,6 +133,7 @@ form {
     
     #submitForm {
         width: 80%;
+        max-width: 80vw;
         height: 8vh;
         left: 10%;
 
@@ -148,22 +149,19 @@ form {
     #closeButton {
         width: 5vh;
         height: 5vh;
-        top: -2vh;
-        right: -2vh;
+        top: calc(2vh - 2vh);
+        right: calc(5% - 2vh);
     }
 }
 
 
 @media (min-width: 600px) and (max-width: 1300px){
-    #submitForm {
-        width: 80%;
-        height: 8vh;
-        left: 10%;
-
-    }
     #formArea {
         left: 15%;
         width: 70%;
+    }
+    #closeButton {
+        right: calc(15% - 2vh)
     }
 
 }
