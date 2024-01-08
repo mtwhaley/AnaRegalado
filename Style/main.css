@@ -66,7 +66,7 @@ hr {
     border: 0.5vh solid #ababab;
     font-size: 3vh;
 }
-#appointmentButton:hover {
+.appointmentButton:hover {
     background-color: #e6fffe;
 }
 
@@ -101,7 +101,7 @@ hr {
     #qualifications ul {
         font-size: 4vw;
     }
-    #appointment {
+    .appointment {
         width: 70vw;
         height: 8vh;
         margin-top: 0;
