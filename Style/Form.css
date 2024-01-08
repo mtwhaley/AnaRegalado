@@ -106,8 +106,12 @@ form {
 
 @media (max-width: 1024px) {
     
+    input, select {
+        font-size: 2.5vh;
+    }
     #formTable {
         width: 90%;
+        font-size: 2.5vh;
     }
     
     #submitForm {
@@ -118,6 +122,7 @@ form {
     }
 
     #formArea {
+        font-size: 2.5vh;
         left: 5%;
         width: 90%;
     }
