@@ -7,10 +7,13 @@
 #formTable td{
     text-align: right;
     padding-top: 2vh;
+    max-width: 50%;
+    min-width: 40%;
 
 }
 input, select {
     font-size: 3vh;
+    max-width: 40vw;
 }
 textarea {
     font-size: 2vh;
@@ -98,4 +101,30 @@ form {
 #closeButton:hover {
     background-color: var(--closeButtonHoverColor);
     
+}
+
+
+@media (max-width: 1024px) {
+    
+    #formTable {
+        width: 90%;
+    }
+    
+    #submitForm {
+        width: 80%;
+        height: 8vh;
+        left: 10%;
+
+    }
+
+    #formArea {
+        left: 5%;
+        width: 90%;
+    }
+    #closeButton {
+        width: 5vh;
+        height: 5vh;
+        top: -2vh;
+        right: -2vh;
+    }
 }
