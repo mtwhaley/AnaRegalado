@@ -43,10 +43,14 @@
 @media (max-width: 1024px) {
     
     .navTable button {
-        height: 8vh;
+        height: 6vh;
     }
     .navTable {
         margin-top: 14vh;
+    }
+    
+    .navTable td {
+        height: 6vh;
     }
     .navigation {
         position: relative;
