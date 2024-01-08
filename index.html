@@ -185,7 +185,7 @@
                         <td><input type="text" name="lname" id="lname"></td>
                     </tr>
                     <tr>
-                        <td><label for="phone">Phone Number: </label></td>
+                        <td><label for="phone" id="phoneLabel">Phone Number: </label></td>
                         <td><input type="tel" name="phone" id="phone"></td>
                     </tr>
                     <tr>
@@ -195,7 +195,7 @@
                     <tr>
                         <td><label for="ins">Insurance: </label></td>
                         <td>
-                            <select name="ins" id="ins">
+                            <select name="ins" id="ins" onchange="additionalField()">
                                 <option value="BC/BS" onclick="hideOtherInsurance()">Blue Cross / Blue Shield</option>
                                 <option value="Sunflower" onclick="hideOtherInsurance()">Sunflower</option>
                                 <option value="Medicaid" onclick="hideOtherInsurance()">Medicaid</option>
@@ -311,6 +311,16 @@
     <script src="Scripts/ArrayLists.js"></script>
     <script src="Scripts/info.js"></script>
     <script>
+
+        function additionalField() {
+            const selection=document.getElementById("ins").value
+            if (selection=="Other") {
+                showOtherInsurance()
+            }
+            else {
+                hideOtherInsurance()
+            }
+        }
         function openForm() {
             document.getElementById("formBackground").style.display="block"
         }
@@ -328,22 +338,23 @@
         
         function MobileChanges(x) {
                 
-                if (x.matches) {
-                    loadListTable("serviceTable", 1, servicesOffered)
-                    loadListTable("approachTable", 1, approaches)
-                    
-                }
-                else {
-                    loadListTable("serviceTable", 2, servicesOffered)
-                    loadListTable("approachTable", 2, approaches)
-
-                }
+            if (x.matches) {        //mobile device
+                loadListTable("serviceTable", 1, servicesOffered)
+                loadListTable("approachTable", 1, approaches)
+                document.getElementById("phoneLabel").innerText="Phone: "
+                
             }
+            else {                  //desktop or laptop
+                loadListTable("serviceTable", 2, servicesOffered)
+                loadListTable("approachTable", 2, approaches)
 
-            document.addEventListener("DOMContentLoaded", function(e) {
-                var x=window.matchMedia("(max-width: 1024px)")
-                MobileChanges(x)
-            })
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function(e) {
+            var x=window.matchMedia("(max-width: 1024px)")
+            MobileChanges(x)
+        })
     </script>
     
 </body>
