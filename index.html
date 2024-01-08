@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="Style/Form.css">
 
 </head>
-<body>
+<body onbeforeunload="resetForm()">
     <div id="header">
         <p>
             <span id="Name" style="font-size: 5vh;"><u>Ana Regalado LMSW</u></span><br>
@@ -204,17 +204,16 @@
                         <td><input type="email" name="email" id="email" required></td>
                     </tr>
                     <tr>
-                        <td><label for="ins">Insurance: </label></td>
+                        <td><label for="insBox">Insurance: </label></td>
                         <td>
-                            <select name="ins" id="ins" onchange="additionalField()" required>
+                            <select name="insBox" id="insBox" onchange="additionalField()" required>
                                 <option value="BC/BS">Blue Cross / Blue Shield</option>
                                 <option value="Sunflower">Sunflower</option>
                                 <option value="Medicaid">Medicaid</option>
                                 <option value="proviDrs">proviDrs</option>
                                 <option value="Aetna">Aetna</option>
                                 <option value="Other">Other</option>
-                                
-                                <option value="None" onclick="hideOtherInsurance()">None</option>
+                                <option value="None">None</option>
                             </select>
                         </td>
                     </tr>
@@ -234,6 +233,7 @@
                     </tr>
 
                 </table> 
+                <input type="text" id="ins" hidden>
                 <input type="submit" id="submitForm" value="Submit">
             </form>
             
@@ -325,12 +325,19 @@
     <script src="FormSecrets.js"></script>
     <script>
 
+        function resetForm() {
+            document.getElementById("apptReqForm").reset()
+        }
+
         function validate() {
             const ins=document.getElementById("ins")
+            const insBox=document.getElementById("insBox")
             const otherIns=document.getElementById("otherIns")
-            if (ins.value=="Other") {
-                ins.type="text"
+            if (insBox.value=="Other") {
                 ins.value=otherIns.value
+            }
+            else {
+                ins.value=insBox.value
             }
 
             alert(ins.value)
@@ -338,7 +345,7 @@
         }
 
         function additionalField() {
-            const selection=document.getElementById("ins").value
+            const selection=document.getElementById("insBox").value
             if (selection=="Other") {
                 document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
                 document.getElementById("otherIns").setAttribute("required", true)
