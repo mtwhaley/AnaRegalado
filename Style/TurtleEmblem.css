@@ -184,3 +184,24 @@
     }
 
 }
+
+@media (min-width: 600px) and (max-width: 1024px){
+    #Turtle2 {
+        top: calc(13vh + 21vw);
+        left: -58vw;
+    }
+    #Turtle3 {
+        top: calc(13vh + 28vw);
+        left: -65vw;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .TurtleFam {
+        width: 25vw;
+        height: 25vw;
+    }
+}
+

@@ -90,6 +90,7 @@
 }
 
 
+
 @media (max-width: 1024px) {
     #telehealthEmblem {
         top: calc((15vh - 35vw) / 2);
@@ -101,5 +102,28 @@
     #BannerText {
         font-size: 5vw;
         max-width: 50%;
+    }
+}
+
+@media (min-width: 600px) {
+    #telehealthEmblem {
+        top: calc((15vh - 25vw) / 2);
+        left: 6%;
+        width: 25vw;
+        height: 25vw;
+    }
+    #BannerText {
+        font-size: 4vw;
+    }
+
+
+}
+
+@media (min-width: 900px) {
+    #telehealthEmblem {
+        top: calc((15vh - 15vw) / 2);
+        left: 6%;
+        width: 15vw;
+        height: 15vw;
     }
 }
