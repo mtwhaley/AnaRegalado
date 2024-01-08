@@ -181,28 +181,28 @@
     <div id="formBackground">
         <div id="formArea">
             <p style="margin-bottom: 2vh; margin-top: 3vh; font-size: larger;">Request an appointment</p>
-            <form>
+            <form id="apptReqForm" onsubmit="return validate()">
                 <table id="formTable">
                     <tr>
                         <td><label for="fname">First Name: </label></td>
-                        <td><input type="text" name="fname" id="fname"></td>
+                        <td><input type="text" name="fname" id="fname" required></td>
                     </tr>
                     <tr>
                         <td><label for="lname">Last Name: </label></td>
-                        <td><input type="text" name="lname" id="lname"></td>
+                        <td><input type="text" name="lname" id="lname" required></td>
                     </tr>
                     <tr>
                         <td><label for="phone" id="phoneLabel">Phone Number: </label></td>
-                        <td><input type="tel" name="phone" id="phone"></td>
+                        <td><input type="tel" name="phone" id="phone" required></td>
                     </tr>
                     <tr>
                         <td><label for="email">email: </label></td>
-                        <td><input type="email" name="email" id="email"></td>
+                        <td><input type="email" name="email" id="email" required></td>
                     </tr>
                     <tr>
                         <td><label for="ins">Insurance: </label></td>
                         <td>
-                            <select name="ins" id="ins" onchange="additionalField()">
+                            <select name="ins" id="ins" onchange="additionalField()" required>
                                 <option value="BC/BS">Blue Cross / Blue Shield</option>
                                 <option value="Sunflower">Sunflower</option>
                                 <option value="Medicaid">Medicaid</option>
@@ -230,9 +230,9 @@
                     </tr>
 
                 </table> 
-
+                <input type="submit" id="submitForm" value="Submit">
             </form>
-            <button id="submitForm">Submit</button>
+            
             <button id="closeButton" onclick="closeForm()">&times;</button>
         </div>
     </div>
@@ -317,15 +317,30 @@
 
     <script src="Scripts/ArrayLists.js"></script>
     <script src="Scripts/info.js"></script>
+    <script src="FormSecrets.js"></script>
     <script>
+
+        function validate() {
+            const ins=document.getElementById("ins")
+            const otherIns=document.getElementById("otherIns")
+            if (ins.value=="Other") {
+                ins.type="text"
+                ins.value=otherIns.value
+            }
+
+            alert(ins.value)
+            return false
+        }
 
         function additionalField() {
             const selection=document.getElementById("ins").value
             if (selection=="Other") {
-                showOtherInsurance()
+                document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
+                document.getElementById("otherIns").setAttribute("required", true)
             }
             else {
-                hideOtherInsurance()
+                document.getElementById("manualInsuranceEntry").setAttribute("hidden", true)
+                document.getElementById("otherIns").removeAttribute("required")
             }
         }
         function openForm() {
@@ -334,14 +349,7 @@
         function closeForm() {
             document.getElementById("formBackground").style.display="none"
         }
-        function showOtherInsurance() {
-            console.log(1)
-            document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
-            console.log(2)
-        }
-        function hideOtherInsurance() {
-            document.getElementById("manualInsuranceEntry").setAttribute("hidden", true)
-        }
+        
         
         function MobileChanges(x) {
                 
@@ -359,8 +367,12 @@
         }
 
         document.addEventListener("DOMContentLoaded", function(e) {
+            
+            setFormDesignations()
+            setFormAction()
             var x=window.matchMedia("(max-width: 1024px)")
             MobileChanges(x)
+
         })
     </script>
     
