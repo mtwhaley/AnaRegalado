@@ -155,7 +155,12 @@ form {
 
 
 @media (min-width: 600px) and (max-width: 1300px){
-    
+    #submitForm {
+        width: 80%;
+        height: 8vh;
+        left: 10%;
+
+    }
     #formArea {
         left: 15%;
         width: 70%;
