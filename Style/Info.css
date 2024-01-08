@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --selectedButton: rgba(171, 226, 255, 0.734);
     --unselectedButton: #e6e6e6;
@@ -15,9 +22,15 @@
 #infoButtonTable {
     margin-left: 10%;
     margin-right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     max-width: 100%;
 }
 

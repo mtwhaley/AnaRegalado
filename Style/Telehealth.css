@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root{
     --emblemColor: #abfeff;
 }
@@ -50,7 +57,9 @@
     width: 35%;
     top: 32%;
     left: -4%;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     border-radius: 5%;
 
 }
@@ -86,7 +95,9 @@
     font-size: 8vh;
     top: 50%;
     right: 5vw;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 
