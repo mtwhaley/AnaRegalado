@@ -168,7 +168,65 @@
 
     <div id="formBackground">
         <div id="formArea">
-            <button id="closeButton">&times;</button>
+            <p>Request an appointment</p>
+            <form>
+                <table id="formTable">
+                    <tr>
+                        <td><label for="fname">First Name: </label></td>
+                        <td><input type="text" name="fname" id="fname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name: </label></td>
+                        <td><input type="text" name="lname" id="lname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone Number: </label></td>
+                        <td><input type="tel" name="phone" id="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">email: </label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ins">Insurance: </label></td>
+                        <td>
+                            <select name="ins" id="ins">
+                                <option value="BC/BS" onclick="hideOtherInsurance()">Blue Cross / Blue Shield</option>
+                                <option value="Sunflower" onclick="hideOtherInsurance()">Sunflower</option>
+                                <option value="Medicaid" onclick="hideOtherInsurance()">Medicaid</option>
+                                <option value="proviDrs" onclick="hideOtherInsurance()">proviDrs</option>
+                                <option value="Aetna" onclick="hideOtherInsurance()">Aetna</option>
+                                <option value="Other" onclick="showOtherInsurance()">Other</option>
+                                
+                                <option value="None" onclick="hideOtherInsurance()">None</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <div id="manualInsuranceEntry" hidden>
+                                <label for="otherIns" id="otherInsLabel">Please enter other insurance: </label><br>
+                                <input type="text" name="otherIns" id="otherIns">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <label for="message">Is there anything that you would like me to know?</label><br>
+                            <textarea name="message" id="message" style="width: 95%;" rows="5"></textarea>
+                        </td>
+                    </tr>
+
+                </table>
+                
+                
+                
+                
+
+
+
+            </form>
+            <button id="closeButton" onclick="closeForm()">&times;</button>
         </div>
     </div>
     <div class="Photo">
@@ -252,8 +310,19 @@
 
     <script src="Scripts/ArrayLists.js"></script>
     <script src="Scripts/info.js"></script>
+    <script src="Scripts/FormScripts.js"></script>
     <script>
-        
+        function closeForm() {
+            document.getElementById("formBackground").style.display="none"
+        }
+        function showOtherInsurance() {
+            console.log(1)
+            document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
+            console.log(2)
+        }
+        function hideOtherInsurance() {
+            document.getElementById("manualInsuranceEntry").setAttribute("hidden", true)
+        }
         
         function MobileChanges(x) {
                 

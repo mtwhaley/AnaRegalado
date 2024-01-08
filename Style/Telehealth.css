@@ -92,7 +92,8 @@
 
 @media (max-width: 1024px) {
     #telehealthEmblem {
-        top: -5vw;
+        top: calc((15vh - 35vw) / 2);
+        left: 6%;
         width: 35vw;
         height: 35vw;
     }
