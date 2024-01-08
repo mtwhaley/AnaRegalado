@@ -44,7 +44,7 @@
 
     </div>
     <div id="appointment">
-        <button id="appointmentButton">Request Appointment</button>
+        <button id="appointmentButton" onclick="openForm()">Request Appointment</button>
     </div>
 
     <div class="canvas" id="about">
@@ -168,7 +168,7 @@
 
     <div id="formBackground">
         <div id="formArea">
-            <p>Request an appointment</p>
+            <p style="margin-bottom: 2vh; margin-top: 3vh;">Request an appointment</p>
             <form>
                 <table id="formTable">
                     <tr>
@@ -203,7 +203,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" style="text-align: center;">
+                        <td colspan="2" style="text-align: center;font-size: 2.8vh;padding-top: 2vh;">
                             <div id="manualInsuranceEntry" hidden>
                                 <label for="otherIns" id="otherInsLabel">Please enter other insurance: </label><br>
                                 <input type="text" name="otherIns" id="otherIns">
@@ -211,21 +211,16 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" style="text-align: center;">
+                        <td colspan="2" style="text-align: center;font-size: 2.8vh;">
                             <label for="message">Is there anything that you would like me to know?</label><br>
                             <textarea name="message" id="message" style="width: 95%;" rows="5"></textarea>
                         </td>
                     </tr>
 
-                </table>
-                
-                
-                
-                
-
-
+                </table> 
 
             </form>
+            <button id="submitForm">Submit</button>
             <button id="closeButton" onclick="closeForm()">&times;</button>
         </div>
     </div>
@@ -312,6 +307,9 @@
     <script src="Scripts/info.js"></script>
     <script src="Scripts/FormScripts.js"></script>
     <script>
+        function openForm() {
+            document.getElementById("formBackground").style.display="block"
+        }
         function closeForm() {
             document.getElementById("formBackground").style.display="none"
         }
