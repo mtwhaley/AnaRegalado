@@ -60,9 +60,8 @@ form {
 
 
 #submitForm {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 4vh;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
     width: 40%;
     left: 30%;
     height: 6vh;
@@ -81,7 +80,7 @@ form {
     position: absolute;
     left: 25%;
     width: 50%;
-    height: 90vh;
+    max-height: 90vh;
     top: 5vh;
     z-index: 101;
     background-color: #e6e6e6;
