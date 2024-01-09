@@ -41,7 +41,7 @@ function validatePhone() {
         if (phone[i]=='(') {openParCounter++}
         else if (phone[i]==')') {closedParCounter++}
         else if (phone[i]=='-') {hyphenCounter++}
-        else if (phone[i]!=' ') {spaceCounter++}
+        else if (phone[i]==' ') {spaceCounter++}
         else {numberString+=phone[i]}
 
         if ((openParCounter>1)||(closedParCounter>1)||(hyphenCounter+spaceCounter>3)) {
