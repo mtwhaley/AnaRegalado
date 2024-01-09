@@ -79,26 +79,3 @@ function setInsValue() {
     }
 
 }
-
-function resetForm() {
-    document.getElementById("apptReqForm").reset()
-}
-
-
-function additionalField() {
-    const selection=document.getElementById("insBox").value
-    if (selection=="Other") {
-        document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
-        document.getElementById("otherIns").setAttribute("required", true)
-    }
-    else {
-        document.getElementById("manualInsuranceEntry").setAttribute("hidden", true)
-        document.getElementById("otherIns").removeAttribute("required")
-    }
-}
-function openForm() {
-    document.getElementById("formBackground").style.display="block"
-}
-function closeForm() {
-    document.getElementById("formBackground").style.display="none"
-}
