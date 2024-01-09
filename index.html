@@ -342,45 +342,10 @@
 
     <script src="Scripts/ArrayLists.js"></script>
     <script src="Scripts/info.js"></script>
+    <script src="Scripts/FormScripts.js"></script>
     <script src="FormSecrets.js"></script>
     <script>
 
-        function resetForm() {
-            document.getElementById("apptReqForm").reset()
-        }
-
-        function validate() {
-            const ins=document.getElementById("ins")
-            const insBox=document.getElementById("insBox")
-            const otherIns=document.getElementById("otherIns")
-            if (insBox.value=="Other") {
-                ins.value=otherIns.value
-            }
-            else {
-                ins.value=insBox.value
-            }
-
-            alert(ins.value)
-            return false
-        }
-
-        function additionalField() {
-            const selection=document.getElementById("insBox").value
-            if (selection=="Other") {
-                document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
-                document.getElementById("otherIns").setAttribute("required", true)
-            }
-            else {
-                document.getElementById("manualInsuranceEntry").setAttribute("hidden", true)
-                document.getElementById("otherIns").removeAttribute("required")
-            }
-        }
-        function openForm() {
-            document.getElementById("formBackground").style.display="block"
-        }
-        function closeForm() {
-            document.getElementById("formBackground").style.display="none"
-        }
         
         
         function MobileChanges(x) {
