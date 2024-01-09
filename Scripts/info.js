@@ -1,47 +1,7 @@
-const servicesOffered=[
-    "ADHD","Anger Management", "Behavioral Issues", "Bipolar Disorder",
-    "Chronic Illness", "Coping Skills", "Domestic Abuse", "Domestic Violence","Eating Disorders",
-    "Family Conflict", "Grief", "Marital and Premarital Conflict", "Prenatal/ Postpartum/ Maternal Issues",
-    "Racial Identity", "Relationship Issues", "School Issues", "Self Esteem Issues", "Sleep or Insomnia",
-    "Spirituality Issues", "Stress", "Womens' Issues", "Anxiety"
-]
-
-const approaches=[
-    "Art Therapy", "Christian Counseling", "Cognitive Behavioral Therapy (CBT)", "Culturally-Sensitive Therapy",
-    "Dialectal Behavior Therapy(DBT)", "Family Systems", "Motivational Interviewing", "Person-Centered Therapy",
-    "Solution Focused Brief Therapy (SFBT)", "Strength-Based Therapy","Trauma-Focused Therapy"
-]
 
 
-function loadListTable(tableID, numCols, array) {
-    array.sort()
-    const table=document.getElementById(tableID)
-
-    columnCounter=1
-    var currentRow
-    for (var i=0;i<array.length;i++) {
-        if (columnCounter==1) {
-            const newRow=document.createElement("tr")
-            currentRow=newRow
-        }
 
 
-        const cell=document.createElement("td")
-        cell.innerText=array[i]
-        currentRow.appendChild(cell)
-
-
-        if (columnCounter==numCols) {
-            table.appendChild(currentRow)
-            columnCounter=1
-        }
-        else {columnCounter+=1}
-
-        if ((columnCounter!=1)&&(i==array.length-1)) {
-            table.appendChild(currentRow)
-        }
-    }
-}
 
 function setInfoButtons() {
     const servicesButton=document.getElementById("servicesButton")

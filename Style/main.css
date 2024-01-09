@@ -94,7 +94,7 @@ hr {
 .appointmentButton {
     width: 100%;
     height: 100%;
-    background-color: red; /*#abfeff;*/
+    background-color: green; /*#abfeff;*/
     border-radius: 4vh;
     border: 0.5vh solid #ababab;
     font-size: 3vh;
