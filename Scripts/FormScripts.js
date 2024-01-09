@@ -7,7 +7,7 @@ function validate() {
     if (validateEmail()==false) {errorOut("email"); return false}
 
 
-    return false
+    return true
 }
 
 
