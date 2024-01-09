@@ -7,7 +7,7 @@ function validate() {
     if (validateEmail()==false) {errorOut("email"); return false}
 
 
-    return true
+    return false
 }
 
 
@@ -31,15 +31,20 @@ function validatePhone() {
     var openParCounter=0
     var closedParCounter=0
     var hyphenCounter=0
+    var spaceCounter=0
     var numberString=""
+
+
+
 
     for (var i=0;i<phone.length;i++) {
         if (phone[i]=='(') {openParCounter++}
         else if (phone[i]==')') {closedParCounter++}
         else if (phone[i]=='-') {hyphenCounter++}
-        else numberString+=phone[i]
+        else if (phone[i]!=' ') {spaceCounter++}
+        else {numberString+=phone[i]}
 
-        if ((openParCounter>1)||(closedParCounter>1)||(hyphenCounter>3)) {
+        if ((openParCounter>1)||(closedParCounter>1)||(hyphenCounter+spaceCounter>3)) {
             return false
         }
     }
@@ -51,6 +56,8 @@ function validatePhone() {
     return true
 
 }
+
+
 
 function errorOut(inputID) {
     document.getElementById(inputID).style.border="0.4vh solid red"
