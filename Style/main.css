@@ -104,6 +104,7 @@ hr {
     border-radius: 4vh;
     border: 0.5vh solid #ababab;
     font-size: 3vh;
+    color: black;
 }
 .appointmentButton:hover {
     background-color: #e6fffe;
