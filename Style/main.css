@@ -65,6 +65,7 @@ hr {
     border: 1vh solid #abfeff;
     top: 20%;
     left: 8%;
+    transform: rotate(45deg);
 
     
 }
